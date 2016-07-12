@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1OO-Zg-tOh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Weather Page View Controller-->
+        <scene sceneID="lfY-gT-ICs">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1OO-Zg-tOh" customClass="WeatherPageViewController" customModule="My_Weather" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8T-jz-oFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="422"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="i3K-xm-9wa">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewControllerId" id="AkT-Ng-uPl" customClass="WeatherViewController" customModule="My_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Wha-4J-ydk"/>
+                        <viewControllerLayoutGuide type="bottom" id="iYI-oC-hfF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="D7e-6J-bVr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lviv" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-yR-JW2">
+                                <rect key="frame" x="278" y="238" width="45" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9U-yK-fLR">
+                                <rect key="frame" x="276" y="279" width="48" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgS-6V-bYy">
+                                <rect key="frame" x="272" y="307" width="56" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sunny" translatesAutoresizingMaskIntoConstraints="NO" id="fLa-7f-kfD">
+                                <rect key="frame" x="194" y="28" width="212" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="UUs-Zb-59s"/>
+                                    <constraint firstAttribute="width" constant="212" id="moF-Hx-rOk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r9U-yK-fLR" firstAttribute="centerX" secondItem="i5d-yR-JW2" secondAttribute="centerX" id="1XB-cP-DwK"/>
+                            <constraint firstItem="xgS-6V-bYy" firstAttribute="top" secondItem="r9U-yK-fLR" secondAttribute="bottom" constant="8" id="CYg-pg-j7J"/>
+                            <constraint firstItem="fLa-7f-kfD" firstAttribute="centerX" secondItem="D7e-6J-bVr" secondAttribute="centerX" id="DBw-VR-FAp"/>
+                            <constraint firstItem="i5d-yR-JW2" firstAttribute="centerX" secondItem="D7e-6J-bVr" secondAttribute="centerX" id="V0R-QA-E8B"/>
+                            <constraint firstItem="i5d-yR-JW2" firstAttribute="top" secondItem="fLa-7f-kfD" secondAttribute="bottom" constant="8" id="VkA-Iv-pbI"/>
+                            <constraint firstItem="xgS-6V-bYy" firstAttribute="centerX" secondItem="r9U-yK-fLR" secondAttribute="centerX" id="ZBr-Sc-qU1"/>
+                            <constraint firstItem="fLa-7f-kfD" firstAttribute="top" secondItem="Wha-4J-ydk" secondAttribute="bottom" constant="8" id="cg0-RA-Q1C"/>
+                            <constraint firstItem="r9U-yK-fLR" firstAttribute="top" secondItem="i5d-yR-JW2" secondAttribute="bottom" constant="8" id="tAf-Ts-Fra"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="i5d-yR-JW2" id="UQW-fT-4ac"/>
+                        <outlet property="imageView" destination="fLa-7f-kfD" id="9Q2-Ce-dUO"/>
+                        <outlet property="temperatureLabel" destination="xgS-6V-bYy" id="274-wc-ff3"/>
+                        <outlet property="weatherLabel" destination="r9U-yK-fLR" id="mCC-D1-cyo"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ac-kY-3Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1285" y="426"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sunny" width="144" height="147"/>
+    </resources>
 </document>
