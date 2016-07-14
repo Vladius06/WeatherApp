@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D092C2E91D378A1400C1626B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092C2E81D378A1400C1626B /* SettingsTableViewController.swift */; };
+		D092C2EB1D37915D00C1626B /* AddLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092C2EA1D37915D00C1626B /* AddLocationTableViewController.swift */; };
+		D092C2EE1D37A4A400C1626B /* LocationsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092C2ED1D37A4A400C1626B /* LocationsDataManager.swift */; };
 		D0E55EDA1D34D3DF00C45F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E55ED91D34D3DF00C45F9A /* AppDelegate.swift */; };
 		D0E55EDF1D34D3DF00C45F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E55EDD1D34D3DF00C45F9A /* Main.storyboard */; };
 		D0E55EE11D34D3DF00C45F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E55EE01D34D3DF00C45F9A /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D092C2E81D378A1400C1626B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		D092C2EA1D37915D00C1626B /* AddLocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationTableViewController.swift; sourceTree = "<group>"; };
+		D092C2ED1D37A4A400C1626B /* LocationsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataManager.swift; sourceTree = "<group>"; };
 		D0E55ED61D34D3DE00C45F9A /* My Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E55ED91D34D3DF00C45F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E55EDE1D34D3DF00C45F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D092C2EC1D37A45B00C1626B /* Data model */ = {
+			isa = PBXGroup;
+			children = (
+				D092C2ED1D37A4A400C1626B /* LocationsDataManager.swift */,
+			);
+			name = "Data model";
+			sourceTree = "<group>";
+		};
 		D0E55ECD1D34D3DE00C45F9A = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +79,7 @@
 			children = (
 				D0E55EF01D34E7F700C45F9A /* Constants.swift */,
 				D0E55ED91D34D3DF00C45F9A /* AppDelegate.swift */,
+				D092C2EC1D37A45B00C1626B /* Data model */,
 				D0E55EF21D34F3A100C45F9A /* Networking */,
 				D0E55EEB1D34DDB200C45F9A /* View Controllers */,
 				D0E55EDD1D34D3DF00C45F9A /* Main.storyboard */,
@@ -80,6 +95,8 @@
 			children = (
 				D0E55EEE1D34DE1F00C45F9A /* WeatherPageViewController.swift */,
 				D0E55EEC1D34DDE000C45F9A /* WeatherViewController.swift */,
+				D092C2E81D378A1400C1626B /* SettingsTableViewController.swift */,
+				D092C2EA1D37915D00C1626B /* AddLocationTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -166,8 +183,11 @@
 			files = (
 				D0E55EDA1D34D3DF00C45F9A /* AppDelegate.swift in Sources */,
 				D0E55EED1D34DDE000C45F9A /* WeatherViewController.swift in Sources */,
+				D092C2E91D378A1400C1626B /* SettingsTableViewController.swift in Sources */,
+				D092C2EB1D37915D00C1626B /* AddLocationTableViewController.swift in Sources */,
 				D0E55EEF1D34DE1F00C45F9A /* WeatherPageViewController.swift in Sources */,
 				D0E55EF11D34E7F700C45F9A /* Constants.swift in Sources */,
+				D092C2EE1D37A4A400C1626B /* LocationsDataManager.swift in Sources */,
 				D0E55EF41D34F41100C45F9A /* WebResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

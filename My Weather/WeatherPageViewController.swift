@@ -14,17 +14,22 @@ class WeatherPageViewController: UIPageViewController, UIPageViewControllerDataS
         super.viewDidLoad()
         
         dataSource = self
-        
-        Webservice.loadResource(weatherResource) { result in
-            if let weather = Weather(json: result) {
-                self.weathers = [weather]
+        for weatherResource in weatherResources {
+            Webservice.loadResource(weatherResource) { result in
+                if let weather = Weather(json: result) {
+                    self.weathers.append(weather)
+                }
             }
         }
     }
     
-    private let weatherResource = WebResource<AnyObject>(weatherAPISourceString: "conditions/q/zmw:00000.4.33393.json") { data in
-        let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
-        return json
+    private var weatherResources :[WebResource<AnyObject>] {
+        get {
+           return [WebResource<AnyObject>]()
+        }
+        set {
+            
+        }
     }
     
     private var weathers: [Weather] = [] {
